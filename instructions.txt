@@ -1,0 +1,14 @@
+# Instructions to run the scrape_indeed.py file
+
+1. The scraping uses selenium (https://selenium-python.readthedocs.io/installation.html) for dynamic scraping
+2. There is the issue of the site (indeed.com) rate limiting bots from scraping. Hence it is quite hard to scrape 5000 jobs. Hence be prepared to prove that you are a human to the site (multiple times during the scraping process)!
+3. To run simply type python scrape_indeed.py 
+
+
+
+# Instructions to run the classifier
+1. The format to run the classifier is python classify_job.py test_file.csv
+
+You have to provide a test file with only job descriptions. The code will first train a classifier (SVM classifier) using the scraped data. It is a binary classifier since there are two classes (Data Scientist & Software Engineer). Then it will print the 5-fold cross validation score on the training data. It will also write the predictions on the test data to a file named test_predictions.csv.
+
+
